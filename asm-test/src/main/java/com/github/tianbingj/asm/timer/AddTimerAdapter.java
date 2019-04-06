@@ -1,8 +1,12 @@
 package com.github.tianbingj.asm.timer;
 
-import jdk.internal.org.objectweb.asm.*;
 
-import static jdk.internal.org.objectweb.asm.Opcodes.ASM4;
+import org.objectweb.asm.ClassVisitor;
+import org.objectweb.asm.FieldVisitor;
+import org.objectweb.asm.MethodVisitor;
+import org.objectweb.asm.Opcodes;
+
+import static org.objectweb.asm.Opcodes.ASM4;
 
 /**
  * Created by tianbing on 2019/3/23.
@@ -21,7 +25,6 @@ public class AddTimerAdapter extends ClassVisitor {
     public AddTimerAdapter(int i) {
         super(i);
     }
-
     public AddTimerAdapter(ClassVisitor classVisitor) {
         super(ASM4, classVisitor);
     }
