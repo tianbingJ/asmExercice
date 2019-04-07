@@ -22,6 +22,7 @@ public final class ClassUtils {
         return DEFAULT_CLASS_LOADER.defineClass(name, bytes);
     }
 
+
     public static void toClassFile(byte[] bytes, String fileName) throws Exception {
         File file = new File(fileName);
         FileOutputStream outputStream = new FileOutputStream(file);
