@@ -13,7 +13,6 @@ public final class ClassUtils {
 
         public Class<?> defineClass(String name, byte[] b) {
             Class c = defineClass(name, b, 0, b.length);
-            System.out.println("class name:" + c);
             return c;
         }
     }
