@@ -16,7 +16,7 @@ public class WhileIntTest {
     public void testWhileInt() throws Exception {
         WhileIntGenerator whileIntGenerator = new WhileIntGenerator();
         byte[] bytes = whileIntGenerator.dump();
-        ClassUtils.toClassFile(bytes, Exercises.childClassNameFor("While")+ ".class");
+//        ClassUtils.toClassFile(bytes, Exercises.childClassNameFor("While")+ ".class");
         subClass = ClassUtils.loadClass(Exercises.childQualifiedClassName("While"), bytes);
         object = subClass.newInstance();
 

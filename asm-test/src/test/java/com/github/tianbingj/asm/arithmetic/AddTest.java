@@ -16,7 +16,7 @@ public class AddTest {
     @Test
     public void testAddGenerator() throws Exception {
         byte[] bytes = AddGenerator.dump();
-        ClassUtils.toClassFile(bytes, Exercises.CHILD_ClASS_NAME + ".class");
+//        ClassUtils.toClassFile(bytes, Exercises.CHILD_ClASS_NAME + ".class");
         subClass = ClassUtils.loadClass(Exercises.CHILD_QUALIFIED_CLASS_NAME, bytes);
         object = subClass.newInstance();
         testIntAdd();

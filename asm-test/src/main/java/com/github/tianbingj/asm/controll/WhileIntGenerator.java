@@ -21,17 +21,6 @@ public class WhileIntGenerator extends Exercises {
         return classWriter.toByteArray();
     }
 
-    private void addConstructor(ClassWriter classWriter) {
-
-        MethodVisitor mv = classWriter.visitMethod(Opcodes.ACC_PUBLIC, "<init>", "()V", null, null);
-        mv.visitCode();
-        mv.visitVarInsn(Opcodes.ALOAD, 0);
-        mv.visitMethodInsn(Opcodes.INVOKESPECIAL, INTERNAL_CLASS_NAME, "<init>", "()V", false);
-        mv.visitInsn(Opcodes.RETURN);
-        mv.visitMaxs(Constants.AUTO_COMPUTE_SIZE, Constants.AUTO_COMPUTE_SIZE);
-        mv.visitEnd();
-    }
-
     /**
      * 实现
      *  public void whileInt(int count) {

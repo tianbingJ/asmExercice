@@ -12,7 +12,7 @@ public class IfcmpTest {
     @Test
     public void test() throws Exception {
         byte[] bytes = ExerciseIfGenerator.dump();
-        ClassUtils.toClassFile(bytes, Exercises.childClassNameFor("If")+ ".class");
+//        ClassUtils.toClassFile(bytes, Exercises.childClassNameFor("If")+ ".class");
         Class subClass = ClassUtils.loadClass(Exercises.childQualifiedClassName("If"), bytes);
 
         @SuppressWarnings("unchecked")
