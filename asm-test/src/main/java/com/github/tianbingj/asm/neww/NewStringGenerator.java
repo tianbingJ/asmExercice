@@ -1,6 +1,7 @@
 package com.github.tianbingj.asm.neww;
 
 import com.github.tianbingj.asm.Constants;
+import com.github.tianbingj.asm.Utils;
 import com.github.tianbingj.asm.data.Exercises;
 import org.objectweb.asm.ClassWriter;
 import org.objectweb.asm.MethodVisitor;
@@ -17,7 +18,7 @@ public class NewStringGenerator extends Exercises {
     public static byte[] dump() throws Exception {
         ClassWriter classWriter = new ClassWriter(ClassWriter.COMPUTE_FRAMES);
         classWriter.visit(Opcodes.V1_8, Opcodes.ACC_PUBLIC, childInternalClassName(FOR_CASE), null, Exercises.INTERNAL_CLASS_NAME, null);
-        addConstructor(classWriter);
+        Utils.addConstructor(classWriter, Exercises.INTERNAL_CLASS_NAME);
         addGenString(classWriter);
         classWriter.visitEnd();
         return classWriter.toByteArray();

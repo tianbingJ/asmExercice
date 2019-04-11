@@ -8,6 +8,8 @@ import org.objectweb.asm.Label;
 import org.objectweb.asm.MethodVisitor;
 import org.objectweb.asm.Opcodes;
 
+import static com.github.tianbingj.asm.Utils.addConstructor;
+
 public class WhileIntGenerator extends Exercises {
 
     private static final String FOR_CASE = "While";
@@ -15,7 +17,7 @@ public class WhileIntGenerator extends Exercises {
     public byte[] dump() throws Exception {
         ClassWriter classWriter = new ClassWriter(ClassWriter.COMPUTE_FRAMES);
         classWriter.visit(Opcodes.V1_8, Opcodes.ACC_PUBLIC + Opcodes.ACC_SUPER, childInternalClassName(FOR_CASE), null, Exercises.INTERNAL_CLASS_NAME, null);
-        addConstructor(classWriter);
+        addConstructor(classWriter, Exercises.INTERNAL_CLASS_NAME);
         addWhileInt(classWriter);
         classWriter.visitEnd();
         return classWriter.toByteArray();

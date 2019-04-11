@@ -2,8 +2,8 @@ package com.github.tianbingj.asm.array;
 
 import com.github.tianbingj.asm.ClassUtils;
 import com.github.tianbingj.asm.data.Exercises;
+import org.junit.Assert;
 import org.junit.Test;
-import org.testng.Assert;
 
 import java.lang.reflect.Method;
 

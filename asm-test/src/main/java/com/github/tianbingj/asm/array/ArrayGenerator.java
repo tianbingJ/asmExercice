@@ -3,10 +3,10 @@ package com.github.tianbingj.asm.array;
 
 import com.github.tianbingj.asm.Constants;
 import com.github.tianbingj.asm.data.Exercises;
-import jdk.internal.org.objectweb.asm.Opcodes;
 import org.objectweb.asm.ClassWriter;
 import org.objectweb.asm.FieldVisitor;
 import org.objectweb.asm.MethodVisitor;
+import org.objectweb.asm.Opcodes;
 
 /**
  *     创建一个二维数组，实现get set方法
